@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ContractorCalculator</string>
+    <string name="labor_cost">Enter Labor cost</string>
+    <string name="material_cost">Enter Material cost</string>
+    <string name="labor">Labor</string>
+    <string name="material">Material</string>
+    <string name="calculate">Calculate</string>
+    <string name="subtotal">SubTotal:</string>
+    <string name="tax">Tax:</string>
+    <string name="_0_00">0.00</string>
+    <string name="_0_002">0.00</string>
+    <string name="total">Total:</string>
+    <string name="_0_003">0.00</string>
+    <string name="change_rate">Change Rate </string>
+    <string name="default_tax_rate">5.00% </string>
+    <string name="tax_rate">Tax Rate: </string>
+    <string name="enter_new_tax_rate">Enter New Tax Rate:</string>
+</resources>

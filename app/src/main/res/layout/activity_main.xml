@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextLaborCost"
+        android:layout_width="234dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="56dp"
+        android:autofillHints=""
+        android:hint="@string/labor_cost"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMaterialLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/material"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLaborCost" />
+
+    <TextView
+        android:id="@+id/textViewLaborLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/labor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMaterialCost"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:hint="@string/material_cost"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLaborCost" />
+
+    <Button
+        android:id="@+id/buttonChangeRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/change_rate"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCalculate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTaxRateValue" />
+
+    <TextView
+        android:id="@+id/textViewSubTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+
+    <TextView
+        android:id="@+id/textViewTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTax" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/_0_003"
+        app:layout_constraintStart_toEndOf="@+id/textViewTotalLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalLabel" />
+
+    <TextView
+        android:id="@+id/textViewSubTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/_0_00"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSubTotalLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewSubTotalLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewSubTotalLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/_0_002"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTaxLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewTaxLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewTaxLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTaxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSubTotal" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="108dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="204dp"
+        android:text="@string/calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMaterialCost" />
+
+    <TextView
+        android:id="@+id/textViewTaxRateValue"
+        android:layout_width="110dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="184dp"
+        android:text="@string/default_tax_rate"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCalculate"
+        app:layout_constraintStart_toEndOf="@+id/textViewTaxRateLabel" />
+
+    <TextView
+        android:id="@+id/textViewTaxRateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/tax_rate"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCalculate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
